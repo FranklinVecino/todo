@@ -1,0 +1,26 @@
+.tarjeta {
+    background-color: lightblue;
+    border: 1px solid black;
+    padding: 2rem;
+    margin: 0 auto 1.5rem auto; /* Centrado horizontal y margen inferior */
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    max-width: 900px; /* Ancho máximo para mejorar la legibilidad en pantallas grandes */
+    text-align: center;
+}
+
+.img{
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    width: 300;
+    height: auto;
+    display: block;
+    box-shadow: 5px 5px 0px #424242;
+    padding: 10px;
+    border: 1px solid #000
+    
+}
+
+.h2{
+    text-align: center;
+}

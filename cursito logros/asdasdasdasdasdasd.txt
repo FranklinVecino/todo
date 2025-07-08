@@ -1,0 +1,24 @@
+1.- #include <iostream>
+
+int main() {
+    std::cout << "hola mundo" << std::endl;
+    
+    int edad = 15;
+    std::cout << "edad: " << edad << std::endl;
+    
+    float flotante = 9.81f;
+    std::cout << "Flotante: " << flotante << std::endl;
+    
+    char letras = 'F';
+    std::cout << "Char: " << letras << std::endl;
+    
+    return(0);
+}
+
+
+
+
+
+
+
+2.- 

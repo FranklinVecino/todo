@@ -1,0 +1,156 @@
+respuesta 6:
+#include <iostream>
+
+int main() {
+    int opcion;
+
+    do {
+
+        std::cout << "\n menu." << std::endl;
+        std::cout << "1. saludar." << std::endl;
+        std::cout << "2. despedirse." << std::endl;
+        std::cout << "3. salir." << std::endl;
+        std::cout << "Elige una opcion: ";
+        std::cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                std::cout << "¡Hola! Que tengas un buen dia." << std::endl;
+                break; 
+            case 2:
+                std::cout << "¡Adios! Vuelve pronto." << std::endl;
+                break;
+            case 3:
+                std::cout << "Saliendo del programa..." << std::endl;
+                break;
+            default: 
+                std::cout << "Opcion no valida. Por favor, intenta de nuevo." << std::endl;
+                break;
+        }
+
+    } while (opcion != 3); 
+    return 0;
+}
+
+respuesta 7:
+#include <iostream>
+
+float calcularAreaRectangulo(float base, float altura);
+
+int main(){
+    
+    float baseUsuario, alturaUsuario;
+    
+    std::cout << "introduce la base del triangulo: ";
+    std::cin >>baseUsuario;
+    std::cout << "introduce la altura del triangulo: ";
+    std::cin >>alturaUsuario;
+    
+    float area = calcularAreaRectangulo(baseUsuario, alturaUsuario);
+    
+    std::cout << "el area del rectangulo es: " << area << std::endl;
+    
+    return 0;
+    
+
+}    
+    float calcularAreaRectangulo(float base, float altura) {
+        return base * altura;
+    }
+
+
+
+
+
+
+respuesta 8:
+#include <iostream>
+
+void modificarPorValor(int val) {
+    std::cout << "dentro de modificar, el valor que recibi es: " << val << std::endl;
+    val += 10;
+    std::cout << "dentro de modificar, el valor actual es: " << val << std::endl;
+}
+
+// 2. Función que recibe un parámetro por referencia (usando '&')
+// Se pasa una REFERENCIA a la variable original. Los cambios afectan a la variable original.
+void modificarPorReferencia(int &ref) {
+    std::cout << "dentro de referencia, el valor recibido es: " << ref << std::endl;
+    ref += 10;
+    std::cout << "dentro de referencia, el valor actual es: " << ref << std::endl;
+}
+
+int main() {
+    int numero = 20;
+
+    std::cout << "demostracion de paso por valor " << std::endl;
+    std::cout << "Valor de 'numero' antes de llamar a la funcion: " << numero << std::endl;
+    modificarPorValor(numero);
+    std::cout << "Valor de 'numero' despues de llamar a la funcion: " << numero << " (SIN CAMBIOS)" << std::endl;
+    
+    std::cout << "\n--- Demostracion de Paso por Referencia ---" << std::endl;
+    std::cout << "Valor de 'numero' antes de llamar a la funcion: " << numero << std::endl;
+    modificarPorReferencia(numero);
+    std::cout << "Valor de 'numero' despues de llamar a la funcion: " << numero << " (¡CAMBIO!)" << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+respuesta 9:
+#include <iostream>
+#include <vector>   
+#include <string>   
+
+int main() {
+    std::vector<std::string> comidasFavoritas;
+    std::string comidaTemporal;
+
+    std::cout << "introduce tus 3 comidas favoritas." << std::endl;
+
+    for (int i = 0; i < 3; ++i) {
+        std::cout << "comida " << i + 1 << ": ";
+        
+        std::getline(std::cin >> std::ws, comidaTemporal); 
+        
+        comidasFavoritas.push_back(comidaTemporal);
+    }
+
+    std::cout << "\ntus comidas favoritas son" << std::endl;
+
+    for (int i = 0; i < comidasFavoritas.size(); ++i) {
+        std::cout << "- " << comidasFavoritas[i] << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+
+respuesta 10:
+#include <iostream>
+
+const double PI = 3.1415926535;
+
+void calcularPerimetro(double radio);
+
+int main() {
+    double radioUsuario;
+
+    std::cout << "ingresa el radio del circulo: ";
+    std::cin >> radioUsuario;
+
+    calcularPerimetro(radioUsuario);
+
+    return 0;
+}
+
+void calcularPerimetro(double radio) {
+    double perimetro = 2 * PI * radio;
+    
+    std::cout << "El perimetro de tu circulo es: " << perimetro << std::endl;
+}

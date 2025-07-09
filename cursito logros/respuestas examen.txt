@@ -1,0 +1,155 @@
+respuesta 1:
+#include <iostream>
+
+int main(){
+    
+    std::cout << "hola mundo \n";
+    
+    int entero = 15;
+    float flotante = 15.4874;
+    char letra = 'A';
+    bool verdadero = true;
+    
+    std::cout << "el entero es: "<< entero << "\n";
+    std::cout << "el flotante es: " << flotante << "\n";
+    std::cout << "el char es: " << letra << "\n";
+    std::cout << "el booleano es: " <<verdadero << "\n"; 
+    
+    return 0;
+}
+
+
+
+
+
+
+respuesta 2:
+#include <iostream>
+    #include <cmath>
+    
+    int main(){
+  
+     std::cout << "¡Hola, mundo!" << std::endl;
+
+    double primero; 
+    double segundo;
+    std::cout << "Introduce el primer numero: ";
+    std::cin >> primero;
+    
+    std::cout << "introduce el segundo numero: ";
+    std::cin >> segundo;
+    
+    std::cout << "los numeros introducidos son: " << primero << " y " << segundo <<std::endl;
+
+
+    double potencia = pow(primero,segundo);
+    std::cout << "si elevamos el primero por el segundo nos queda: " <<potencia << std::endl;
+    
+    double raiz = sqrt(primero);
+    std::cout << "raiz cuadrada del primer numero es: " << raiz << std::endl;
+
+
+    return 0;
+    }
+  
+
+
+
+
+
+
+respuesta 3:
+#include <iostream>
+#include <cmath>
+
+int main() {
+    
+    int edad;
+    std::cout << "ingresa tu edad y te dire si eres mayor de edad: ";
+    std::cin >> edad;
+    
+        if (edad >= 0 && edad < 18){
+         
+            std::cout << " no eres mayor de edad ";
+            
+            } else if (edad >= 18 && edad <= 120){
+                    
+                std::cout << " eres mayor de edad ";
+            
+              }  else {
+                  
+                  std::cout << " o ingresaste mal un dato o eres un zombie " << std::endl;
+                  
+                  
+                      }
+    
+    return 0;
+}
+
+
+
+
+
+
+
+respuesta 4:
+#include <iostream>
+#define LIMITE 10
+
+int main(){
+    
+    int numero;
+std::cout << "dame un numero y mostrare su tabla de multiplicacion: ";
+std::cin >> numero;
+
+    for (int i = 1; i <= 10; i++){ //se que en lugar de 10 va LIMITE pero al colocarlo
+                                    //da error, supongo que es un error de sintaxis pero
+                                    //ya se hace la idea.
+        
+        int multiplicacion = numero * i;
+        std::cout << numero << " x " << i << " = " << multiplicacion << std::endl;
+        
+    }
+
+return 0;
+}
+
+
+
+
+
+
+
+
+respuesta 5:
+#include <iostream>
+
+int main(){
+    
+    
+    int numero_correcto = 72;
+    int numero;
+    std::cout << "Bienvenido, ¿puedes adivinar el numero que estoy pensando?. elige un numero del 1 al 100: ";
+    std::cin >> numero;
+    
+    
+    if(numero >= 1 && numero <= 100){
+      while (numero != numero_correcto){
+            
+            if (numero < numero_correcto){
+                std::cout << "intenta un numero mas alto ";
+            } else{
+                std::cout << "intenta un numero mas bajo";
+            }
+            std::cin >> numero;
+         }
+    std::cout << "FELICIDADES HAS ADIVINADO EL NUMERO" << std::endl;
+    
+    }
+    
+    else{
+        std::cout << "ingresa un numero valido" << std::endl;
+    }
+    
+    return 0;
+}
